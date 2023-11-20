@@ -1,0 +1,41 @@
+Java Class Design
+
+1. Main Class (SnakeGame.java):
+- The entry point of the application.
+- Sets up the JavaFX stage and scene.
+- Initializes the game loop.
+
+2. Game Controller (GameController.java):
+- Manages game logic such as movement, collisions, and scoring.
+- Interacts with the UI and other classes.
+
+3. Snake (Snake.java):
+- Represents the snake in the game.
+- Handles the growth and movement of the snake.
+
+4. Food (Food.java):
+- Represents the food items in the game.
+- Handles the placement and re-spawning of food.
+
+5. Database Handler (DatabaseHandler.java):
+- Manages all interactions with the MySQL database.
+- Includes methods for connecting, reading, and writing to the database.
+
+6. Utilities (Utils.java):
+- Contains utility functions, constants, and enums used across the project.
+
+
+Database Schema/Tables
+
+
+1. Scores Table:
+- ScoreID (Primary Key, INT, Auto-Increment): Unique identifier for each score entry.
+- PlayerID (INT, Foreign Key if using Player table): Identifier linking to the player.
+- Score (INT): The score achieved by the player.
+- DateAchieved (DATETIME): The date and time when the score was recorded.
+
+2. Players Table (optional, for multi-user functionality):
+- PlayerID (Primary Key, INT, Auto-Increment): Unique identifier for each player.
+- Username (VARCHAR): The player’s username.
+- Password (VARCHAR): The player’s password (store as a hash for security).
+- Email (VARCHAR): The player’s email address (optional).
